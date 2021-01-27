@@ -156,3 +156,9 @@ class PassGere:
         data = [dt for dt in gen]
         data = tuple(data)
         return choice(data)
+
+    def reset_passw(self):
+        """
+        This method can reset a password.
+        """
+        self._set_passw('')
