@@ -80,17 +80,17 @@ class Cliface:
                     break
             except ValueError:
                 pass
-        self._choose = self._gen.generate_pass(
+        self._gen.reset_passw()
+        passw = self._gen.generate_pass(
             size=self._choose,
             **self._values
         )
-        print('+' * self._choose.__len__())
-        print(self._choose)
-        print('+' * self._choose.__len__())
+        print('+' * passw.__len__())
+        print(passw)
+        print('+' * passw.__len__())
         return True
 
     def _insert_value(self, key=''):
-        print(self._choose)
         if self._choose.__eq__('y') or self._choose.__eq__('Y'):
             self._values[key] = True
             return True
