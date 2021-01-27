@@ -80,7 +80,10 @@ class Cliface:
                     break
             except ValueError:
                 pass
-        self._choose = self._gen.generate_pass(size=self._choose, **self._values)
+        self._choose = self._gen.generate_pass(
+            size=self._choose,
+            **self._values
+        )
         print('+' * self._choose.__len__())
         print(self._choose)
         print('+' * self._choose.__len__())
